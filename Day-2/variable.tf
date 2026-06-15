@@ -1,5 +1,4 @@
 variable "owners_id" {
-  type    = string
   default = "318244486837"
 }
 

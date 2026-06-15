@@ -4,7 +4,7 @@ data "aws_vpc" "default_vpc" {
 
 data "aws_ami" "default_ami" {
   most_recent = true
-  owners      = var.owners_id
+  owners      = [var.owners_id]
 
   filter {
     name   = "ubuntu-ami"

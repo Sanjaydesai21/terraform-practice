@@ -27,9 +27,18 @@ terraform {
       source  = "hashicorp/tls"
       version = "~> 4.0"
     }
+    local = {
+      source  = "hashicorp/local"
+      version = "~> 2.0"
+    }
   }
 }
 
+resource "local_file" "private_key" {
+  filename        = "${path.module}/terraform-key.pem"
+  content         = tls_private_key.generated.private_key_pem
+  file_permission = "0400"
+}
 resource "tls_private_key" "generated" {
   algorithm = "RSA"
   rsa_bits  = 4096

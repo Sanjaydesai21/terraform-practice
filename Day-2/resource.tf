@@ -76,7 +76,9 @@ resource "aws_instance" "http_ec2" {
   key_name               = aws_key_pair.my_key.key_name
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   user_data              = file("/root/terraform-practice/Day-2/user-data.sh")
-  tags                   = "nginx-ec2"
+  tags = {
+    Name = "nginx_ec2"
+  }
 }
 
 

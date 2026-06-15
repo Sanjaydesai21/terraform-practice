@@ -53,8 +53,8 @@ resource "aws_key_pair" "my_key" {
   }
 }
 
-resource "aws_security_group" "ec2_sg" {
-  name   = "ec2_sg"
+resource "aws_security_group" "new_sg" {
+  name   = "new_sg"
   vpc_id = data.aws_vpc.default_vpc.id
 
   ingress {

@@ -1,5 +1,5 @@
 variable "owners_id" {
-  default = "318244486837"
+  default = "099720109477"
 }
 
 variable "ingress_ssh" {

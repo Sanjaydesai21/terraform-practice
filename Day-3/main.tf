@@ -126,7 +126,7 @@ resource "aws_instance" "public_instance" {
   ami                         = data.aws_ami.default_ami.id
   instance_type               = var.instance_type
   subnet_id                   = aws_subnet.public_subnet.id
-  vpc_security_group_ids      = [aws_security_group.my_sg.name]
+  vpc_security_group_ids      = [aws_security_group.my_sg.id]
   key_name                    = "mykey"
   associate_public_ip_address = true
   user_data                   = file("/root/terraform-practice/Day-3/user_data.sh")
@@ -139,7 +139,7 @@ resource "aws_instance" "private_instance" {
   ami                         = data.aws_ami.default_ami.id
   instance_type               = var.instance_type
   subnet_id                   = aws_subnet.private_subnet.id
-  vpc_security_group_ids      = [aws_security_group.my_sg.name]
+  vpc_security_group_ids      = [aws_security_group.my_sg.id]
   key_name                    = "mykey"
   associate_public_ip_address = false
   user_data                   = file("/root/terraform-practice/Day-3/user_data.sh")

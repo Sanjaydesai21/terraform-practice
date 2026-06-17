@@ -35,7 +35,7 @@ variable "private_subnet_az_2b" {
 }
 
 variable "ami" {
-  default = "ami-0db56f446d44f2f09"
+  default = "ami-01a00762f46d584a1"
 }
 
 variable "instance_type" {

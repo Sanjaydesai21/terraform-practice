@@ -26,7 +26,7 @@ module "asg" {
   source                = "./module/asg"
   ami                   = "ami-01a00762f46d584a1"
   instance_type         = "t2.micro"
-  key_name              = "my-key"
+  key_name              = "mykey"
   vpc_security_group_id = module.vpc.vpc_security_group_id
   private_subnet_1a_id  = module.vpc.private_subnet_1a_id
   private_subnet_2b_id  = module.vpc.private_subnet_2b_id

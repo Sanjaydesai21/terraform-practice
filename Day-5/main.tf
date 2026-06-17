@@ -30,5 +30,5 @@ module "asg" {
   vpc_security_group_id = module.vpc.vpc_security_group_id
   private_subnet_1a_id  = module.vpc.private_subnet_1a_id
   private_subnet_2b_id  = module.vpc.private_subnet_2b_id
-  alb_tg_arn            = module.alb.tg_arn
+  alb_tg_arn            = module.alb.alb_tg_arn
 }

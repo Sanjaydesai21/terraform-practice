@@ -33,7 +33,3 @@ module "asg" {
   alb_tg_arn            = module.alb.alb_tg_arn
 }
 
-module "s3-bucket" {
-  source      = "./module/s3-bucket"
-  bucket_name = var.bucket_name
-}

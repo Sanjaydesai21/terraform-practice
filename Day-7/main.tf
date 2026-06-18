@@ -32,3 +32,8 @@ module "asg" {
   private_subnet_2b_id  = module.vpc.private_subnet_2b_id
   alb_tg_arn            = module.alb.alb_tg_arn
 }
+
+module "s3-bucket" {
+  source      = "./module/s3-bucket"
+  bucket_name = var.bucket_name
+}

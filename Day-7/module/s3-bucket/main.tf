@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "terraform-tfstate-lock-check" {
-  bucket = "terraform-tfstate-lock-check"
+  bucket = var.bucket_name
   tags = {
-    Name = "terraform-tfstate-lock-check"
+    Name = var.bucket_name
   }
 
 }

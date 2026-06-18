@@ -21,3 +21,5 @@ ami = "ami-01a00762f46d584a1"
 instance_type = "t3.micro"
 
 key_name = "mykey"
+
+bucket_name = "terraform-tfstate-lock-check"

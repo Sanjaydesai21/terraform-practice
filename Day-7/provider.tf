@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket                   = module.s3-bucket.bucket_name
+    bucket                   = "terraform-tfstate-lock-check"
     region                   = "ap-south-1"
     key                      = "terraform.tfstate"
     use_lockfile             = true

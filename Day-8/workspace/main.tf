@@ -3,5 +3,5 @@ resource "random_id" "new_id" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "work_bucket_${terraform.workspace}_${random_id.new_id.hex}"
+  bucket = "work-bucket-${terraform.workspace}-${random_id.new_id.hex}"
 }
